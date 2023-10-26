@@ -24,9 +24,10 @@ public class UserController {
 		}
 	
 	@GetMapping("all")
-	public String getAllUsers() {
+	public List<Users> getAllUsers() {
 		List<Users> a = userService.getAllUsers();
-		return a.get(0).toString();
+		System.out.println(a.size());
+		return a;
 	}
 	
 }
